@@ -13,7 +13,11 @@ class Listener():
     def __init__(self):
         self.sub = node.create_subscription(Int16, "countup", cb, 10)
 
-rclpy.init()
-node = Node("listener")
-listener = Listener()
-rclpy.spin(node)
+def main():
+    rclpy.init()
+    node = Node("listener")
+    listener = Listener()
+    rclpy.spin(node)
+
+if __name__ == '__main__':
+    main()
