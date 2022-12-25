@@ -1,6 +1,21 @@
 # mypkg
 これは、ros2のパッケージです。
 
+# ファイルの説明
+* README.md
+
+* talker.py
+
+* listener.py
+
+* talk_listen.launch.py
+
+* test.bash
+
+* LICENSE
+
+
+
 # テスト環境
 * Ubuntu 22.04.01 LTS
 
