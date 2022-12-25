@@ -4,18 +4,20 @@
 これは、ros2のパッケージです。
 
 # ファイルの説明
-* README.md
-
-* talker.py
-
-* listener.py
-
-* talk_listen.launch.py
-
-* test.bash
-
-* LICENSE
-
+* README.md:
+  * このリポジトリについての説明です。最初にお読みください。
+* talker.py:
+  * この　
+  * 注意：このファイルは"listener.py"と並行して使用するファイルです。
+* listener.py:
+  * 
+  * 注意：このファイルは"talker.py"と並行して使用するファイルです。
+* talk_listen.launch.py:
+  * 
+* test.bash:
+  * 
+* LICENSE:
+  * 3条項BSDライセンス
 
 
 # テスト環境
