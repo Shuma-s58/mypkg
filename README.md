@@ -1,3 +1,5 @@
+![test](https://github.com/melonsuika58/mypkg/actions/workflows/test.yml/badge.svg)
+
 # mypkg
 これは、ros2のパッケージです。
 
