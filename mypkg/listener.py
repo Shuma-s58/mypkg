@@ -10,14 +10,14 @@ from std_msgs.msg import Int16
     #node.get_logger().info("Listen: %d" % msg.data)
 
 class Listener():
-    def cb(node, msg):
+    def cb(self, msg):
         #global node
-        node.get_logger().info("Listen: %d" % msg.data)
+        self.node.get_logger().info("Listen: %d" % msg.data)
 
     def __init__(self):
         self.sub = node.create_subscription(Int16, "countup", cb, 10)
 
 rclpy.init()
 node = Node("listener")
-listener = Listener(node, msg)
+listener = Listener()
 rclpy.spin(node)
