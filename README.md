@@ -10,6 +10,8 @@
   # 実行 (端末2)
   ros2 run mypkg listener
   ```
+* 使用したコマンド
+  * cat, grepを使用, 
 
 # ファイルの説明
 * README.md:
