@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -xv
 # SPDX-FileCopyrightText: 2022 Shuma Suzuki
 # SPDX-LIcense-Identifier: BSD-3-Clause
 
