@@ -14,27 +14,27 @@
 # ファイルの説明
 * README.md:
   * このリポジトリについての説明です。最初にお読みください。
-* talker.py(場所: mypkg/mypkg/talker.py):
+* talker.py(場所: ./mypkg/mypkg/talker.py):
   * listener.pyに対し、数字のカウントアップを伝達する。
   * 注意：このノードは"listener.py"と並行して使用するノードです。
   ```sh
   # 実行
   ros2 run mypkg talker
   ```
-* listener.py(場所: mypkg/mypkg/listener.py):
+* listener.py(場所: ./mypkg/mypkg/listener.py):
   * talker.pyから送られてた数字をメッセージとして表示する。
   * 注意：このノードは"talker.py"と並行して使用するノードです。
   ```sh
   # 実行(talker.pyを起動後、別の端末で実行してください。)
   ros2 run mypkg listener
   ```
-* talk_listen.launch.py(場所: mypkg/launch/talk_listen.launch.py):
+* talk_listen.launch.py(場所: ./mypkg/launch/talk_listen.launch.py):
   * 上記の"talker.py"と"listener.py"を同時に起動させる。
   ```sh
   # 実行
   ros2 launch mypkg talk_listen.launch.py
   ```
-* test.bash(場所: mypkg/test/test.bash):
+* test.bash(場所: ./mypkg/test/test.bash):
   * talk_listen.launch.pyに対するテスト
   ```sh
   # 移動
