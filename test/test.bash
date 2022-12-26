@@ -29,3 +29,13 @@ out=$(cat /tmp/mypkg.log | grep -c 'listen: 10')
 [ "$?" = 1 ]       || ng ${LINENO}
 [ "${out}" = "0" ] || ng ${LINENO} 
 
+out=$(cat /tmp/mypkg.log | grep -c 'Listen: 100')
+
+[ "$?" = 1 ]       || ng ${LINENO}
+[ "${out}" = "0" ] || ng ${LINENO}
+ 
+out=$(cat /tmp/mypkg.log | grep -c 'Listn: 10')
+
+[ "$?" = 1 ]       || ng ${LINENO}
+[ "${out}" = "0" ] || ng ${LINENO} 
+
