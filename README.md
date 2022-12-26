@@ -2,6 +2,14 @@
 
 # mypkg
 これは、ros2のパッケージです。
+* できること
+  * 数字のカウントアップを別の端末へと送り、表示することができる。
+  ```sh
+  # 実行 (端末1)
+  ros2 run mypkg talker
+  # 実行 (端末2)
+  ros2 run mypkg listener
+  ```
 
 # ファイルの説明
 * README.md:
