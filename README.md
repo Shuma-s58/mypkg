@@ -53,7 +53,8 @@
 # テスト環境
 * Ubuntu 22.04.01 LTS
 # 参考にしたもの
-* https://academy.gmocloud.com/lesson/20191009/7620
+* grepコマンドとは？
+  * https://academy.gmocloud.com/lesson/20191009/7620
  
 # ライセンスについて
 * このソフトウェアパッケージは、3条項BSDライセンスの下、再分布および使用が許可されています
