@@ -9,6 +9,7 @@
   ros2 run mypkg talker
   # 実行 (端末2)
   ros2 run mypkg listener
+  # どちらも^Cで終了
   ```
 * 使用したコマンド
   * cat, grepを使用, 
@@ -22,6 +23,7 @@
   ```sh
   # 実行
   ros2 run mypkg talker
+  # ^Cで終了
   ```
 * listener.py(場所: ./mypkg/mypkg/listener.py):
   * talker.pyから送られてた数字をメッセージとして表示する。
@@ -29,12 +31,14 @@
   ```sh
   # 実行(talker.pyを起動後、別の端末で実行してください。)
   ros2 run mypkg listener
+  # ^Cで終了
   ```
 * talk_listen.launch.py(場所: ./mypkg/launch/talk_listen.launch.py):
   * 上記の"talker.py"と"listener.py"を同時に起動させる。
   ```sh
   # 実行
   ros2 launch mypkg talk_listen.launch.py
+  # ^Cで終了
   ```
 * test.bash(場所: ./mypkg/test/test.bash):
   * talk_listen.launch.pyに対するテスト
