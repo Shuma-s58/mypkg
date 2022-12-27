@@ -1,6 +1,3 @@
-# SPDX-FileCopyrightText: 2022 Shuma Suzuki
-# SPDX-LIcense-Identifier: BSD-3-Clause
-
 from setuptools import setup
 import os
 from glob import glob
