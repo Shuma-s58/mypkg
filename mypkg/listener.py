@@ -9,9 +9,9 @@ class Listener():
     def __init__(self):
         self.sub = node.create_subscription(Int16, "countup", cb, 10)
 
-    def cb(msg):
-        global node
-        node.get_logger().info("Listen: %d" % msg.data)
+    def cb(self, msg):
+        #global node
+        self.node.get_logger().info("Listen: %d" % msg.data)
 
 def main():
     rclpy.init()
