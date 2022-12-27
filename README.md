@@ -3,22 +3,22 @@
 # mypkg
 これは、ros2のパッケージです。
 * できること
-  * 数字のカウントアップを別の端末へと送り、表示することができる。
+  * 数字をカウントアップして、トピック/countupを通じて送信できる。
+  * メッセージの型は、16ビット符号つき整数です。
   ```sh
   # 実行 (端末1)
-  ros2 run mypkg talker
-  # 実行 (端末2)
-  ros2 run mypkg listener
-  # どちらも^Cで終了
+  ros2 launch mypkg talk_listen.launch.py
+  # ^Cで終了
   ```
+  * その他のファイルの説明は、以下の「ファイルの説明」をご覧ください。
 * 使用したコマンド
-  * cat, grepを使用, 
+  * cat, grepを使用
 
 # ファイルの説明
 * README.md:
   * このリポジトリについての説明です。最初にお読みください。
 * talker.py(場所: ./mypkg/mypkg/talker.py):
-  * listener.pyに対し、数字のカウントアップを伝達する。
+  * "listener.py"に対し、数字のカウントアップを伝達する。
   * 注意：このノードは"listener.py"と並行して使用するノードです。
   ```sh
   # 実行
@@ -26,7 +26,7 @@
   # ^Cで終了
   ```
 * listener.py(場所: ./mypkg/mypkg/listener.py):
-  * talker.pyから送られてた数字をメッセージとして表示する。
+  * "talker.py"から送られてた数字をメッセージとして表示する。
   * 注意：このノードは"talker.py"と並行して使用するノードです。
   ```sh
   # 実行(talker.pyを起動後、別の端末で実行してください。)
