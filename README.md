@@ -2,13 +2,34 @@
 
 # mypkg
 これは、ros2のパッケージです。
+* ノードは、/talkerと/listenerの２つです。
+  * /talker: パブリッシャーを1つ持つ。
+  * /listener: サブスクライバーを1つ持つ。
+* トピックは、/countupです。
+* メッセージの型は、16ビット符号つき整数です。
+
 * できること
-  * 数字をカウントアップして、トピック/countupを通じて送信できる。
-  * メッセージの型は、16ビット符号つき整数です。
+  * /talkerからカウントアップした数字を/countupを通じて/listenerに送信できる。
   ```sh
+  # パターン1
   # 実行 (端末1)
+  ros2 run mypkg talker   
+  # 実行 (端末2)
+  ros2 run mypkg listener
+  # どちらも^Cで終了
+  ```
+  ```sh
+  # パターン2
+  # 実行
   ros2 launch mypkg talk_listen.launch.py
   # ^Cで終了
+  ```
+  * talk_listen.launch.pyのテストができる。
+  ```sh
+  # 移動
+  cd ./mypkg/test
+  # 実行
+  ./test.bash 
   ```
   * その他のファイルの説明は、以下の「ファイルの説明」をご覧ください。
 * 使用したコマンド
@@ -17,15 +38,15 @@
 # ファイルの説明
 * README.md:
   * このリポジトリについての説明です。最初にお読みください。
-* talker.py(場所: ./mypkg/mypkg/talker.py):
-  * "listener.py"に対し、数字のカウントアップを伝達するパブリッシャーを1つ持つ。。
+* talker.py(場所: `./mypkg/mypkg/talker.py`):
+  * "listener.py"に対し、数字のカウントアップを伝達するパブリッシャーを1つ持つ。
   * 注意：このノードは"listener.py"と並行して使用するノードです。
   ```sh
   # 実行
   ros2 run mypkg talker
   # ^Cで終了
   ```
-* listener.py(場所: ./mypkg/mypkg/listener.py):
+* listener.py(場所: `./mypkg/mypkg/listener.py`):
   * "talker.py"から送られてた数字を受け取るサブスクライバーを１つ持つ。
   * 注意：このノードは"talker.py"と並行して使用するノードです。
   ```sh
@@ -33,14 +54,14 @@
   ros2 run mypkg listener
   # ^Cで終了
   ```
-* talk_listen.launch.py(場所: ./mypkg/launch/talk_listen.launch.py):
+* talk_listen.launch.py(場所: `./mypkg/launch/talk_listen.launch.py`):
   * 上記の"talker.py"と"listener.py"を同時に起動させる。
   ```sh
   # 実行
   ros2 launch mypkg talk_listen.launch.py
   # ^Cで終了
   ```
-* test.bash(場所: ./mypkg/test/test.bash):
+* test.bash(場所: `./mypkg/test/test.bash`):
   * talk_listen.launch.pyに対するテスト
   ```sh
   # 移動
