@@ -66,9 +66,6 @@
   ./test.bash
   ```
 
-* LICENSE:
-  * 3条項BSDライセンス
-
 # テスト環境
 * Ubuntu 22.04.01 LTS
 # 参考にしたもの
